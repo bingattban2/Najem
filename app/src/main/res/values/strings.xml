@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">إدارة مبيعات الشبكة</string>
+    <string name="nav_home">الرئيسية</string>
+    <string name="nav_management">الإدارة</string>
+    <string name="nav_settings">الإعدادات</string>
+</resources>

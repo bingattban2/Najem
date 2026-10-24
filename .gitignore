@@ -1,0 +1,71 @@
+# Generated Android/Gradle build outputs
+.gradle/
+**/build/
+/bin/
+/gen/
+/out/
+.cxx/
+.externalNativeBuild/
+*.class
+*.dex
+*.apk
+*.aab
+*.aar
+*.ap_
+*.hprof
+
+# Local IDE / user-device files
+local.properties
+.idea/
+*.iml
+*.swp
+*.swo
+.DS_Store
+captures/
+.navigation/
+*.log
+
+# Signing and deployment secrets: NEVER commit
+release.properties
+**/release.properties
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+*.key
+*.p8
+*.asc
+*.env
+.env
+.env.*
+!.env.example
+google-services.json
+**/google-services.json
+client_secret*.json
+credentials.json
+*service-account*.json
+*oauth-client*.json
+
+# Customer records/backups and database recovery artifacts
+*.njbak
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+*.bak
+*.backup
+*.dump
+*.sql.gz
+/rescue_*.zip
+
+# Crash / internal generated reports
+*.mapping.txt
+mapping.txt
+app/outputs/
+
+# Keep: gradlew, gradle/wrapper/gradle-wrapper.jar,
+# gradle/wrapper/gradle-wrapper.properties and app/schemas/*.json.

@@ -1,0 +1,19 @@
+إصلاح خطأ Unresolved reference paymentMethodLabel في PaymentDialog.kt
+=================================================================
+المشكلة: بقي ملف PaymentDialog.kt من نسخة سابقة بعد استخراج المشروع المبسط فوق مجلد موجود.
+المشروع المبسط الحالي لا يحتوي الملف ولا يستدعيه.
+لا تعِد دالة paymentMethodLabel؛ ميزة التحصيل المستقل غير مطلوبة.
+
+أسهل حل من مجلد المشروع داخل Code On The Go:
+rm -f app/src/main/java/com/najimwifi/app/ui/home/PaymentDialog.kt
+
+أو لتجنب الحذف نهائيا، شغّل:
+bash tools/cleanup_legacy_payment_dialog.sh
+سيُنقَل الملف إلى .cleanup-backups/PaymentDialog.kt.bak، خارج مجلد مصادر Kotlin.
+
+أعد تشغيل:
+bash ./gradlew -Pandroid.aapt2FromMavenOverride="$HOME/android-sdk/build-tools/36.0.0/aapt2" :app:assembleDebug :app:testDebugUnitTest
+
+مهم: عند استخراج مشروع جديد فوق قديم لا تُزال الملفات المحذوفة في النسخة الجديدة تلقائيًا.
+احتفظ بنسخة احتياطية منفصلة من مجلد المشروع وبيانات التطبيق قبل استبدال المشروع ككل.
+هذا الإجراء خاص بملف واجهة قديم؛ لا يحذف قاعدة Room ولا يعدل بيانات الهاتف.
